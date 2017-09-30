@@ -7,11 +7,13 @@ import java.util.ArrayList;
  */
 
 public class Datos {
+    private static ArrayList<Persona> personas = new ArrayList();
 
-    public static ArrayList<Persona> personas = new ArrayList<>();
-
-    public static void guaradarPersona(Persona p){
-
+    public static void guardarPersona(Persona p){
+        personas.add(p);
     }
 
+    public static ArrayList<Persona> obtenerPersonas(){
+        return personas;
+    }
 }

@@ -5,11 +5,15 @@ package com.example.android.personas;
  */
 
 public class Persona {
-
     private String cedula;
     private String nombre;
     private String apellido;
 
+    public Persona(String cedula, String nombre, String apellido){
+        this.cedula=cedula;
+        this.nombre=nombre;
+        this.apellido=apellido;
+    }
 
     public String getCedula() {
         return cedula;
@@ -34,11 +38,7 @@ public class Persona {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
-
-    public Persona(String cedula, String nombre, String apellido){
-
-
+    public void guardar(){
+        Datos.guardarPersona(this);
     }
-
-    public void guardar()
 }
